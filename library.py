@@ -17,5 +17,11 @@ def payment(first_pay,low_times,add_distance,add_night_distance,add_low_times):
     if (add_distance + add_night_distance * 1.25) % 2370 != 0:
         add_pay+=1
     credit = first_pay + (low_pay + add_pay) * 80 #sum credit
+    print(low_pay)
+    print(add_pay)
     print(credit)
     return 0
+
+def countdistance(first_distance,before_distance,distance):
+    dist = distance - before_distance
+    return dist
