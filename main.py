@@ -1,13 +1,11 @@
 import library
 
-first_pay = 410
-add_low_times = 0
-add_distance = 0
-add_night_distance = 0
-add_night_low_times = 0
-
-
-if __name__ == "__main__":
+def main():
+    first_pay = 410
+    add_low_times = 0
+    add_distance = 0
+    add_night_distance = 0
+    add_night_low_times = 0
     count = 0
     while 1:
         count+=1
@@ -43,3 +41,6 @@ if __name__ == "__main__":
             add_distance += library.countdistance(before_distance,distance)
             add_low_times += library.countlowtime(before_distance,distance,before_times,times)
             before_times = times; before_distance = distance
+
+if __name__ == "__main__":
+    main()
