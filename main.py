@@ -15,7 +15,7 @@ if __name__ == "__main__":
         if distance >= 10000:
             if count >= 3:
                 if add_distance == 0:
-                    print("-5")
+                    print("走行距離が0")
                     exit(-5)
                 add_distance -= 10520
                 if add_distance < 0:
@@ -23,16 +23,16 @@ if __name__ == "__main__":
                 library.payment(first_pay,add_low_times,add_distance,add_night_distance,add_night_low_times)
                 exit(0)
             else:
-                print("-1")
+                print("2行未満")
                 exit(-1)
         if count == 1:
             before_times = times; before_distance = distance
             if distance != 0:
-                print("-4")
+                print("1行目の距離が0になっていない")
                 exit(-4)
         else:
             if times - before_times <= 0:
-                print("-2")
+                print("時間が昇順になっていない")
                 exit(-2)
             before_hour = before_times // 3600000; times_hour = times // 3600000
             if before_hour < 5 or 22 <= before_hour < 29 or 46 <= before_hour < 53 or 70 <= before_hour < 77 or 94 <= before_hour:

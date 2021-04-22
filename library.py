@@ -5,7 +5,7 @@ def function_input():
     if st == '': #blank line
         return 0,10000
     if re.search('^\d{2}:\d{2}:\d{2}.\d{3}',st) == None:
-        print("-3")
+        print("時間の入力形式エラー")
         exit(-3)
     else:
         s = st.split() #s[0]:hh:mm:ss.fff  s[1]:distance(m)
@@ -15,7 +15,7 @@ def function_input():
         temp = float(s[1])*10
         distance = int(temp) #distance[10cm]
         if distance >= 1000:
-            print("-6")
+            print("距離の入力形式エラー")
             exit(-6)
         return times,distance
 
